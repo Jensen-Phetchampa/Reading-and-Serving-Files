@@ -1,0 +1,22 @@
+1) We didnt use sudo for lab.js because we were not working with or creating any type of
+server in this file.
+
+2) lab.js reads the file plain.txt and displays its content onto the console
+
+3) *************after readFile***************** is displayed before the contents of plain.txt
+in the output because there is an asynchronous execution of functions, once the
+readFile function is started it doesnt wait to finish, it moves onto the next function which
+the console.log that displays *************after readFile*****************.
+
+4) toString('utf8') converts the ASCII contents of plain.txt and converts it into
+letters/text that we can read
+
+5) we dont need .toString('utf8') because fs.readFile already gives us a Buffer by default
+
+6) create a function that uses the files extension to determine what type of
+file it is and how it should respond
+
+7) you can combine components from homework 2 and this assignment by having the user make
+requests for differnet types of data. for example instead of scheduling an appointment
+you can make it so that the user requests an image or a text file and based
+on the request the server will give the proper output.
